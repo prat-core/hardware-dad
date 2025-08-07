@@ -1,5 +1,5 @@
 from typing import List, Dict, Any, Union
-from base import Component
+from .base import Component
 
 
 def to_wokwi_format(components: List[Component], connections: List[Union[List, Dict[str, Any]]] = None) -> Dict[str, Any]:
@@ -35,8 +35,8 @@ def to_wokwi_format(components: List[Component], connections: List[Union[List, D
                 wokwi_connections.append([
                     conn["from"],
                     conn["to"], 
-                    "green",
-                    ["v0"]
+                    conn.get("color", "green"),
+                    []  # Empty wire placement instructions (auto-route)
                 ])
             else:
                 # Already in array format

@@ -1,4 +1,4 @@
-from base import Component, ComponentType
+from .base import Component, ComponentType
 from typing import Dict, Any
 
 

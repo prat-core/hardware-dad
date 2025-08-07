@@ -1,8 +1,8 @@
-from base import Component, ComponentType
-from arduino import ArduinoUno
-from led import LED
-from servo import Servo
-from serializer import to_wokwi_format
+from .base import Component, ComponentType
+from .arduino import ArduinoUno
+from .led import LED
+from .servo import Servo
+from .serializer import to_wokwi_format
 from typing import Union, Dict, Any
 
 
