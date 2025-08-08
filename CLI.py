@@ -6,6 +6,7 @@ Interactive CLI interface for building Arduino circuits with visual output
 import os
 import sys
 import json
+import subprocess
 from typing import Dict, Any
 from dotenv import load_dotenv
 from colorama import Fore, Style, init
@@ -289,15 +290,23 @@ def print_help():
 
 def main():
     """Main function - choose between demo and interactive mode"""
-    if len(sys.argv) > 1 and sys.argv[1] == '--demo':
-        # Demo mode (original functionality)
-        print("Running in demo mode...")
-        agent = BasicWokwiAgent()
-        result = agent.create_arduino_led_circuit()
-        print(f"Demo completed: {result}")
+    # Check if enhanced_cli.py exists and use it
+    enhanced_cli_path = os.path.join(os.path.dirname(__file__), "enhanced_cli.py")
+    if os.path.exists(enhanced_cli_path):
+        # Use the enhanced CLI for better visual output
+        import subprocess
+        subprocess.run([sys.executable, enhanced_cli_path] + sys.argv[1:])
     else:
-        # Interactive CLI mode
-        interactive_cli()
+        # Fallback to original CLI
+        if len(sys.argv) > 1 and sys.argv[1] == '--demo':
+            # Demo mode (original functionality)
+            print("Running in demo mode...")
+            agent = BasicWokwiAgent()
+            result = agent.create_arduino_led_circuit()
+            print(f"Demo completed: {result}")
+        else:
+            # Interactive CLI mode
+            interactive_cli()
 
 
 if __name__ == "__main__":

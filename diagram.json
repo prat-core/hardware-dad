@@ -3,18 +3,15 @@
   "author": "wokwi_components",
   "editor": "wokwi",
   "parts": [
-    { "type": "wokwi-arduino-uno", "id": "arduino_1", "top": 100, "left": 200, "attrs": {} },
-    { "type": "wokwi-led", "id": "red_led", "top": 50, "left": 50, "attrs": {"color":"red"} },
-    { "type": "wokwi-led", "id": "yellow_led", "top": 120, "left": 50, "attrs": {"color":"yellow"} },
-    { "type": "wokwi-led", "id": "green_led", "top": 190, "left": 50, "attrs": {"color":"green"} }
+    { "type": "wokwi-arduino-uno", "id": "arduino_1", "top": 100, "left": 100, "attrs": {} },
+    { "type": "wokwi-led", "id": "red_led", "top": 30, "left": 50, "attrs": {"color":"red"} },
+    { "type": "wokwi-led", "id": "blue_led", "top": 30, "left": 150, "attrs": {"color":"blue"} }
   ],
   "connections": [
-    [ "arduino_1:8", "red_led:A", "red", [] ],
-    [ "arduino_1:9", "yellow_led:A", "yellow", [] ],
-    [ "arduino_1:10", "green_led:A", "green", [] ],
+    [ "arduino_1:2", "red_led:A", "red", [] ],
+    [ "arduino_1:3", "blue_led:A", "blue", [] ],
     [ "red_led:C", "arduino_1:GND.1", "black", [] ],
-    [ "yellow_led:C", "arduino_1:GND.2", "black", [] ],
-    [ "green_led:C", "arduino_1:GND.3", "black", [] ]
+    [ "blue_led:C", "arduino_1:GND.2", "black", [] ]
   ],
   "dependencies": {}
 }
