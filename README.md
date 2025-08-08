@@ -51,3 +51,14 @@ You have two options:
 - Or copy/paste the contents of `diagram.json` into a new project at the Wokwi web simulator: [New Arduino Uno project on Wokwi](https://wokwi.com/projects/new/arduino-uno).
 
 The CLI’s "Generate diagram" step writes a Wokwi-compatible `diagram.json`, so you can simulate it right away in either environment.
+
+### Demo
+
+<details>
+<summary>Show Demo</summary>
+
+- **Prompt**: I want to make a traffic light in arduino, add and connect 3 leds RED, GREEN, YELLOW to an arduino
+
+![Traffic light demo](docs/images/traffic-light-demo.png)
+
+</details>
