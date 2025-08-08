@@ -2,6 +2,18 @@
 
 ## Hardware Dad — Wokwi Circuit Builder CLI
 
+### Demo
+
+<details>
+<summary>Show Demo</summary>
+
+- **Prompt**: I want to make a traffic light in arduino, add and connect 3 leds RED, GREEN, YELLOW to an arduino
+
+![Traffic light demo](docs/images/traffic-light-demo.png)
+
+</details>
+
+
 A simple CLI that uses Anthropic (via LangChain) to build Arduino circuits and export a Wokwi-compatible `diagram.json`.
 
 ### Prerequisites
@@ -52,13 +64,3 @@ You have two options:
 
 The CLI’s "Generate diagram" step writes a Wokwi-compatible `diagram.json`, so you can simulate it right away in either environment.
 
-### Demo
-
-<details>
-<summary>Show Demo</summary>
-
-- **Prompt**: I want to make a traffic light in arduino, add and connect 3 leds RED, GREEN, YELLOW to an arduino
-
-![Traffic light demo](docs/images/traffic-light-demo.png)
-
-</details>
