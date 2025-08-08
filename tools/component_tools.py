@@ -180,6 +180,12 @@ def generate_diagram() -> str:
         
         result += f'  "dependencies": {json.dumps(data["dependencies"])}\n'
         result += "}"
+        
+        # save result to a file 
+        with open("diagram.json", "w") as f:
+            f.write(result)
         return result
+    
+    
     
     return format_wokwi_json(diagram)
