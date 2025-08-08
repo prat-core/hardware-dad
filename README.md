@@ -2,6 +2,8 @@
 
 ## Hardware Dad — Wokwi Circuit Builder CLI
 
+PS: You can actually run code on these arduinos! They are being simulated by wokwi.
+
 ### Demo
 
 <details>
