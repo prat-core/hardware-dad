@@ -1,3 +1,5 @@
+# This was built at a hackathon in 5 hours, It's just a Proof of concept
+
 ## Hardware Dad — Wokwi Circuit Builder CLI
 
 A simple CLI that uses Anthropic (via LangChain) to build Arduino circuits and export a Wokwi-compatible `diagram.json`.
